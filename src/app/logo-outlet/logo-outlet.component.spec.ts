@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EmptyComponent } from './empty.component';
+import { LogoOutletComponent } from './logo-outlet.component';
 
-describe('EmptyComponent', () => {
-  let component: EmptyComponent;
-  let fixture: ComponentFixture<EmptyComponent>;
+describe('LogoOutletComponent', () => {
+  let component: LogoOutletComponent;
+  let fixture: ComponentFixture<LogoOutletComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EmptyComponent ]
+      declarations: [ LogoOutletComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EmptyComponent);
+    fixture = TestBed.createComponent(LogoOutletComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
