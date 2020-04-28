@@ -6,6 +6,7 @@ import { translations, translationChunksConfig } from '@spartacus/assets';
 import { B2cStorefrontModule } from '@spartacus/storefront';
 import { OutletTestModule } from './outlet-test/outlet-test.module';
 import { CustomBannerModule } from './custom-banner/custom-banner.module';
+import { CustomCartModule } from './custom-cart/custom-cart.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CustomBannerModule } from './custom-banner/custom-banner.module';
       }
     }),
     OutletTestModule,
-    CustomBannerModule
+    CustomBannerModule,
+    CustomCartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,6 +7,6 @@
       <p *ngIf="data.headline" [innerHTML]="data.headline"></p>
       <cx-media [container]="data.media"></cx-media>
       <p *ngIf="data.content" [innerHTML]="data.content"></p>
-      Training text
+      {{ data.name }}
     </cx-generic-link>
 </ng-container>
