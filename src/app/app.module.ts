@@ -10,6 +10,7 @@ import { CustomCartModule } from './custom-cart/custom-cart.module';
 import { ConfigDemoModule } from './config-demo/config-demo.module';
 import { ThemeConfig, Theme } from './config-demo/theme.config';
 import { ConfigModule } from '@spartacus/core';
+import { Level, DisplayConfig } from './config-demo/display.config';
 
 @NgModule({
   declarations: [

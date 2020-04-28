@@ -11,7 +11,9 @@ export class ConfigDemoComponent implements OnInit {
   constructor(@Inject(Config) protected config: any) { }
 
   ngOnInit() {
-    console.log(this.config);
+    if (this.config.displayLevel === 'Console') {
+      console.log(this.config);
+    }
   }
 
 }
