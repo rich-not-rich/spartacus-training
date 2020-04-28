@@ -7,6 +7,9 @@ import { B2cStorefrontModule } from '@spartacus/storefront';
 import { OutletTestModule } from './outlet-test/outlet-test.module';
 import { CustomBannerModule } from './custom-banner/custom-banner.module';
 import { CustomCartModule } from './custom-cart/custom-cart.module';
+import { ConfigDemoModule } from './config-demo/config-demo.module';
+import { ThemeConfig, Theme } from './config-demo/theme.config';
+import { ConfigModule } from '@spartacus/core';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,11 @@ import { CustomCartModule } from './custom-cart/custom-cart.module';
     }),
     OutletTestModule,
     CustomBannerModule,
-    CustomCartModule
+    CustomCartModule,
+    ConfigDemoModule,
+    ConfigModule.withConfig({
+      theme: Theme.STRAWBERRIES,
+    } as ThemeConfig),
   ],
   providers: [],
   bootstrap: [AppComponent]
