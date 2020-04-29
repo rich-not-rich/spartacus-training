@@ -26,6 +26,11 @@ import { PAGE_LAYOUT_HANDLER } from '@spartacus/storefront';
         provide: PAGE_LAYOUT_HANDLER,
         useExisting: CustomPageLayoutHandler,
         multi: true,
+      },
+      {
+        provide: PAGE_LAYOUT_HANDLER,
+        useExisting: CustomPageLayoutHandler,
+        multi: true,
       }
   ]
 })
