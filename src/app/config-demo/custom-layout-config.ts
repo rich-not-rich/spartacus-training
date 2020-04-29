@@ -14,13 +14,39 @@ export const trainingLayoutConfig: LayoutConfig = {
             'SiteLogin',
             'MiniCart',
             'NavigationBar',
+            'SiteContext'
           ],
         },
         slots: ['PreHeader', 'SiteLogo', 'SearchBox', 'MiniCart'],
       },
       footer: {
-        slots: ['SiteContext',
-        'SiteLinks', 'Footer'],
+        slots: ['Footer'],
+      },
+      ProductDetailsPageTemplate: {
+        lg: {
+          pageFold: 'UpSelling',
+        },
+        pageFold: 'Summary',
+        slots: [
+          'Summary',
+          'UpSelling',
+          'CrossSelling',
+          'SiteLinks',
+          'PlaceholderContentSlot',
+        ],
+      },
+      SearchResultsListPageTemplate: {
+        lg: {
+          slots: [
+            'Section2',
+            'ProductLeftRefinements',
+            'SearchResultsListSlot',
+          ],
+        },
+        slots: [
+          'ProductLeftRefinements',
+          'SearchResultsListSlot',
+        ],
       },
     },
 };

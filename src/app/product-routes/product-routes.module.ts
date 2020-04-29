@@ -39,12 +39,12 @@ import { ProductPrettyNameNormalizer } from './product-name-normalizer';
       },
     } as OccConfig),
   ],
-  providers: [
-    {
-      provide: PRODUCT_NORMALIZER,
-      useExisting: ProductPrettyNameNormalizer,
-      multi: true,
-    }
-  ]
+  // providers: [
+  //   {
+  //     provide: PRODUCT_NORMALIZER,
+  //     useExisting: ProductPrettyNameNormalizer,
+  //     multi: true,
+  //   }
+  // ]
 })
 export class ProductRoutesModule { }

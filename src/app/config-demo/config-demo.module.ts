@@ -7,6 +7,7 @@ import { DisplayConfig, Level } from './display.config';
 import { trainingLayoutConfig } from './custom-layout-config';
 import { CustomPageLayoutHandler } from './custom-page-layout-handler';
 import { PAGE_LAYOUT_HANDLER } from '@spartacus/storefront';
+import { MiniCartPageLayoutHandler } from './mini-cart-layout-handler';
 
 
 
@@ -24,7 +25,7 @@ import { PAGE_LAYOUT_HANDLER } from '@spartacus/storefront';
   providers: [
       {
         provide: PAGE_LAYOUT_HANDLER,
-        useExisting: CustomPageLayoutHandler,
+        useExisting: MiniCartPageLayoutHandler,
         multi: true,
       }
   ]

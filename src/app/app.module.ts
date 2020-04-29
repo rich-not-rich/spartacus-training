@@ -42,7 +42,7 @@ import { ContactUsModule } from './contact-us/contact-us.module';
     }),
     OutletTestModule,
     CustomBannerModule,
-    CustomCartModule,
+ //   CustomCartModule,
     ConfigDemoModule,
     ConfigModule.withConfig({
       theme: Theme.STRAWBERRIES,
