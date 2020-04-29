@@ -4,6 +4,9 @@ import { ConfigDemoComponent } from './config-demo.component';
 import { ConfigModule } from '@spartacus/core';
 import { defaultDisplayConfig } from './default-display-config';
 import { DisplayConfig, Level } from './display.config';
+import { trainingLayoutConfig } from './custom-layout-config';
+import { CustomPageLayoutHandler } from './custom-page-layout-handler';
+import { PAGE_LAYOUT_HANDLER } from '@spartacus/storefront';
 
 
 
@@ -14,8 +17,16 @@ import { DisplayConfig, Level } from './display.config';
     ConfigModule.withConfig(defaultDisplayConfig),
     ConfigModule.withConfig({
       displayLevel: Level.CONSOLE,
-    } as DisplayConfig)
+    } as DisplayConfig),
+    ConfigModule.withConfig(trainingLayoutConfig),
   ],
-  exports: [ConfigDemoComponent]
+  exports: [ConfigDemoComponent],
+  providers: [
+      {
+        provide: PAGE_LAYOUT_HANDLER,
+        useExisting: CustomPageLayoutHandler,
+        multi: true,
+      }
+  ]
 })
 export class ConfigDemoModule { }
