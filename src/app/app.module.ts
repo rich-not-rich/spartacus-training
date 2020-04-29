@@ -11,6 +11,8 @@ import { ConfigDemoModule } from './config-demo/config-demo.module';
 import { ThemeConfig, Theme } from './config-demo/theme.config';
 import { ConfigModule } from '@spartacus/core';
 import { Level, DisplayConfig } from './config-demo/display.config';
+import { CustomRoutingModule } from './custom-routing/custom-routing.module';
+import { ContactUsModule } from './contact-us/contact-us.module';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { Level, DisplayConfig } from './config-demo/display.config';
     ConfigModule.withConfig({
       theme: Theme.STRAWBERRIES,
     } as ThemeConfig),
+    CustomRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
