@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ConfigModule, RoutingConfig, OccConfig, PRODUCT_NORMALIZER } from '@spartacus/core';
-import { ProductPrettyNameNormalizer } from './product-name-normalizer';
+import { ProductPrettyNameNormalizer, MyProductCategoriesNormalizer } from './product-name-normalizer';
 
 
 
@@ -13,6 +13,7 @@ import { ProductPrettyNameNormalizer } from './product-name-normalizer';
         routes: {
           product: {
             paths: [
+              'oldschool/cameras/:category/:secondCategory/:productCode/:prettyName',
               'product/:manufacturer/:productCode/:name',
               'training-product/:productCode/:name',
               'product/:productCode/:name'
@@ -44,7 +45,12 @@ import { ProductPrettyNameNormalizer } from './product-name-normalizer';
       provide: PRODUCT_NORMALIZER,
       useExisting: ProductPrettyNameNormalizer,
       multi: true,
-    }
+    },
+    {
+      provide: PRODUCT_NORMALIZER,
+      useClass: MyProductCategoriesNormalizer,
+      multi: true,
+    },
   ]
 })
 export class ProductRoutesModule { }
