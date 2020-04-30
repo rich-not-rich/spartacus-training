@@ -15,6 +15,7 @@ import { SearchBoxComponentService } from '@spartacus/storefront';
 import { CustomSearchBoxComponentService } from './custom-search-box-component.service';
 import { CustomRoutingModule } from './custom-routing/custom-routing.module';
 
+import { translationOverwrites } from './i18n/training-i18n-config';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,11 @@ import { CustomRoutingModule } from './custom-routing/custom-routing.module';
       theme: Theme.STRAWBERRIES,
     } as ThemeConfig),
     CustomRoutingModule,
+    ConfigModule.withConfig({
+      i18n: {
+        resources: translationOverwrites,
+      }
+    }),
   ],
   providers: [
       {
