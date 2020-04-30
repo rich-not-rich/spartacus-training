@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "training": {
+    "metastore": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/training",
+            "outputPath": "dist/metastore",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "training:build"
+            "browserTarget": "metastore:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "training:build:production"
+              "browserTarget": "metastore:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "training:build"
+            "browserTarget": "metastore:build"
           }
         },
         "test": {
@@ -115,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "training:serve"
+            "devServerTarget": "metastore:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "training:serve:production"
+              "devServerTarget": "metastore:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "training"
+  "defaultProject": "metastore"
 }
