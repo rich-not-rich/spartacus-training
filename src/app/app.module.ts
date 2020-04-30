@@ -16,6 +16,7 @@ import { CustomSearchBoxComponentService } from './custom-search-box-component.s
 import { CustomRoutingModule } from './custom-routing/custom-routing.module';
 
 import { translationOverwrites } from './i18n/training-i18n-config';
+import { DataBindingModule } from './data-binding/data-binding.module';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { translationOverwrites } from './i18n/training-i18n-config';
         resources: translationOverwrites,
       }
     }),
+    DataBindingModule
   ],
   providers: [
       {
