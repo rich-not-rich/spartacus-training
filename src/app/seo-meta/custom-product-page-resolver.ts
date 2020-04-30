@@ -17,7 +17,7 @@ export class CustomProductPageMetaResolver extends ProductPageMetaResolver {
         this.pageType = PageType.PRODUCT_PAGE;
       }
 
-      private product$ = this.routingService.getRouterState().pipe(
+      private prod$ = this.routingService.getRouterState().pipe(
         map(state => state.state.params['productCode']),
         filter(code => !!code),
         switchMap(code => this.productService.get(code, ProductScope.DETAILS)),
@@ -26,7 +26,7 @@ export class CustomProductPageMetaResolver extends ProductPageMetaResolver {
 
   resolveDescription(): Observable<string> {
       console.log('trimming the description');
-      return this.product$.pipe(
+      return this.prod$.pipe(
       switchMap((p: Product) =>
         this.translation.translate('pageMetaResolver.product.description', {
           description: p.summary.substring(0, 160),
